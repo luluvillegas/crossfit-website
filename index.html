@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrossFit 💪</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #9fd3c7 0%, #ececec 100%);
+        width: 100%;
+        height: 1400px;
+      }
+      h1 {
+        text-align: center;
+        color: #142d4c;
+        font-size: 50px;
+      }
+      h2 {
+        text-align: center;
+        color: #385170;
+        font-size: 35px;
+      }
+      h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+      p {
+        font-size: 22px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+      }
+      img {
+        width: 500px;
+        display: block;
+        margin: 40px auto;
+        border-radius: 4px;
+      }
+      hr {
+        border-style: dotted;
+        width: 400px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #385170;
+        font-size: 18px;
+        color: #ececec;
+        padding: 10px 20px;
+        border: 1px solid #142d4c;
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: #385170;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .text {
+        margin: 80px auto 0 auto;
+        max-width: 1300px;
+      }
+      .moreInfoCard {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .link {
+        color: #385170;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      .signature {
+        text-align: center;
+        font-size: 16px;
+        margin: 90px auto;
+      }
+      .socialMedia {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CrossFit</h1>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/738/original/CrossFit1.jpg?1696216391"
+      alt="People doing CrossFit"
+    />
+    <hr />
+    <div class="text">
+      <h2>What is CrossFit?</h2>
+      <p>
+        Researchers defined the high-intensity training program as
+        <em>strength-building conditioning</em>. It incorporates functional
+        movements that build stamina, strength, and speed, among several other
+        areas."From an exercise perspective, CrossFit takes all aspects of
+        fitness and sports, cherry-picking the best, most effective, and most
+        applicable to everyday life, and combines them together," Richard
+        Froning Jr., a professional CrossFit athlete, told Health.
+      </p>
+      <div class="moreInfoCard">
+        💡 More info:
+        <a
+          href="https://www.crossfit.com/what-is-crossfit/"
+          target="_blank"
+          class="link"
+          >www.crossfit.com</a
+        >
+      </div>
+    </div>
+
+    <div class="text">
+      <h2>Who is it for?</h2>
+      <p>
+        <strong
+          >People of any gender and age or at any stage can do CrossFit.</strong
+        >
+        "We have former football players working out with people in their 70s
+        and 80s and new moms" Dave Lipson, CrossFit Level Four Trainer and
+        founder of an educational fitness platform called ThundrBro, told
+        Health. CrossFit sessions also appeal to all different types of people.
+        That is because while every WOD has suggested weights and movements,
+        most CrossFit boxes promote a practice called scaling."Scaling allows
+        anyone to complete the same workout simply by altering the weights and
+        movements based on the athlete's ability in order to produce the same
+        level of intensity"
+      </p>
+    </div>
+    <button type="button">I am interested!</button>
+    <div class="signature">
+      This page was designed by Lulu Villegas <br />
+      <span class="socialMedia">Instagram:</span> @lulu.villegas.h -
+      <span class="socialMedia">LinkedIn:</span> /lucreciavillegas
+    </div>
+
+    <script>
+      function followUp() {
+        let name = prompt("What is your name?");
+        let response = prompt(
+          "Do you want to recieve emails about CrossFit? (yes/no)"
+        );
+        response = response.toLowerCase().trim();
+        if (response === "yes") {
+          let email = prompt("What is your email?");
+          alert(`Thank you ${name}! We are going to be in touch`);
+        } else {
+          alert(`No worries ${name}! Thanks for reading about CrossFit`);
+        }
+      }
+
+      let interestedButton = document.querySelector("button");
+      interestedButton.addEventListener("click", followUp);
+    </script>
+  </body>
+</html>
